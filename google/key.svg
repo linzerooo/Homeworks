@@ -1,0 +1,8 @@
+<label>
+  <input type="file" id="file-input">
+  <img src="keyboard.png" alt="Описание первого изображения">
+</label>
+<label>
+  <input type="file" id="file-input-2">
+  <img src="keyboard.png" alt="Описание второго изображения">
+</label>
