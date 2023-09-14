@@ -1,0 +1,377 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Лучшие игроки и кланы. KTTC - Как только, так сразу. Сессионная статистика World of Tanks.</title>
+        <link rel="shortcut icon" href="favicon.png", type="image/png">        
+    </head>
+    <body>
+        <head>
+            <div class="container">
+                <style>
+                                        /* ------------------верхнеее меню------------------------- */
+                    body{
+                        background-color: rgb(238,238,238);
+                        overflow-x:hidden;  
+                    }
+                    .menu_bg{
+                        position: relative;
+                        top: -8px;
+                        width: 870;
+                        left: -10;
+                    }
+                    .menu{
+                        position: absolute;
+                        z-index: 5;
+                        padding-top: 1;                                               
+                        right: 0;                        
+                        font-size: 10px;
+                        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    }
+                    .button_enter{
+                        font-size:8.5;
+                        margin-right: 3px;
+                        border-color: lightgray;
+                        border-width: 1;
+                        background-color: white;
+                        height: 26;
+                        border-style: solid;
+                        width: 90;
+                        padding-top: 13;
+                    }
+                    .type{
+                        font-size: 9;
+                        height: 22;
+                        background-color: #F6F6F6;                        
+                    }
+                    .select_what{
+                        font-size: 8.5;
+                        height: 22;
+                        width: 130;
+                    }
+                    .kttc_logo{
+                        position: absolute;
+                        z-index: 5;
+                        padding-top: -50;                                               
+                        left: -522px;
+                        top: -3;        
+                    }
+                    .cross{
+                        position: absolute;
+                        z-index: 5;
+                        padding-top: -50;                                               
+                        left: -570px;
+                        top: 5;  
+                    }
+                    .loupe{
+                        position: flex;
+                    }
+                    /* ------------------боковое меню------------------------- */
+                    .sidebar{
+                        list-style-type: none;
+                        font-size: 8.5px;
+                        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        font-weight: 600;
+                        height: 100%; /* Full-height: remove this if you want "auto" height */
+                        width: 110; /* Set the width of the sidebar */
+                        z-index: 100; /* Stay on top */
+                        top: 30; /* Stay at the top */
+                        left: 0;
+                        overflow-x: hidden; /* Disable horizontal scroll */
+                        padding-top: 1px;
+                        padding-left: 8;
+                     }
+                    .sidebar a{
+                        color: #777290;
+                        text-decoration: none;
+                        margin: 5px 0px;
+                        display: inline-block;
+                    }
+                    .red{
+                        color: red;
+                    }
+                    .sidebar thintextbar{
+                        font-weight: initial;                        
+                    }
+                    .inform{
+                        font-weight: 550;     
+                        padding-top: 20;   
+                        margin: -1px 0px;                                        
+                    }
+                    .sidebar bar_inform{
+                        font-weight: initial;
+                    }
+                    .tg a{
+                        padding-top: 15;   
+                        font-weight: lighter;    
+                        color: #369ee4 ;
+                    }
+                    .vk a{   
+                        font-weight: lighter;    
+                        color: #2b7eb5 ;
+                        margin-top: 0;
+                    }
+                    /* ------------------линия фронта------------------------- */
+                    .line_front{
+                        padding-left: 222;
+                        margin-top: -8;
+                        margin-top: -450;
+                    }
+                    /* ------------------таблицы------------------------- */
+                    /* .wrap{
+                        background-color: #fbfbfb;
+                        height: 300;
+                        width: 235; 
+                        padding-right: 100;
+                        margin-top: 0;
+                        position: relative;
+                    } */
+                    .table{
+                        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        border-width: 1;
+                        border-color: lightgray;
+                        background-color: white;
+                        border-style: solid;
+
+                        height: 420;
+                        width: 230; 
+                        padding-right: 100;
+                        margin-top: 15;
+                        position: relative;
+                        left: 160;
+                    }
+                    h2{
+                        font-size: 14;
+                        font-weight: 600;
+                        color: rgb(71, 70, 70);
+                        margin-top: 20;
+                        margin-left: 20;
+                        height: 10; /**/
+                    }
+                    p{
+                      font-size: 11;
+                      color: rgba(128, 128, 128, 0.742);  
+                      margin-left: 20;
+                      height: 10;
+                    }
+                    .top10{
+                        font-size: 11;                        
+                    }
+                    .top10 li{
+                        line-height: 3;
+                    }
+
+                </style>
+                <header>
+                    <nav class="menu"> 
+                        
+                        <img class="kttc_logo" src="logo.jpg" height="30" width="70">
+                        <img class="cross" src="cross.svg" height="18" width="50">  
+
+                        <input autocomplete='off' spellcheck='false' autocorrect='off' class="select_what" type="search" placeholder="Введите ник или клан" />
+                        <select name="type" class="type">
+                            <option  checked value="/wot/ru/user/">Ник</option>
+                            <option  value="/wot/ru/clan/" >Клан</option>
+                        </select>                        
+                        <button class="loupe"><img src="search.svg" height="17" width="10"></button>
+                        <dev>Ru</dev>                           
+                        <button onclick="window.location.href = 'https://clck.ru/35an4i'"" class="button_enter" >Войти с Lesta ID</button>                   
+                    </nav>
+                    <img class="menu_bg" src="menu.png"  height="40" width="865" ">
+                </header>
+                <ul class="sidebar">
+                    <li class="red" href="/wot/ru/vip">VIP аккаунт</li>
+                    <li><a href="/wot/ru/info/gunmarks">Отметки на стволах</a></li>
+                    <li><a href="/wot/ru/info/mastery">Знаки классности</a></li>
+                    <li><a href="/wot/ru/clans">Кланы</a></li>
+                    <li><a href="/wot/ru/clans">Топ</a></li>
+                    <thintextbar>
+                        <li class=""><a href="/wot/ru/top/tanks">Топ по танкам</a></li>
+                        <li class=""><a href="/wot/ru/top/users">Топ 1000 игроков</a></li>
+                        <li class=""><a href="/wot/ru/top/international-rating">Международный рейтинг</a></li>
+                        <li class=""><a href="/wot/ru/top/users-last-month">Топ 1000 игроков(за прошлый месяц)</a></li>
+                        <li class=""><a href="/wot/ru/top/session">Топ игроков (за последние сессии)</a></li>
+                        <li class=""><a href="/wot/ru/top/clans">Топ 1000 Кланы</a></li>
+                        <li class=""><a href="/wot/ru/top/streamers">Статистика стримеров</a></li>
+                    </thintextbar>
+                    <bar_inform>
+                        <li class="inform"<a href="/wot/ru/vip">Информация</a></li>
+                        <li class=""><a href="/wot/ru/top/streamers">Онлайн</a></li>
+                        <li class=""><a href="/wot/ru/top/streamers">Цветовая шкала</a></li>
+                    </bar_inform>
+                    
+                        <li class="tg"><a href="/wot/ru/top/streamers">Наш Telegram</a></li>
+                        <li class="vk"><a href="/wot/ru/top/streamers">Наш ВК</a></li>
+                </ul>
+                <div class="line_front">
+                    <img src="front.jpg" width="590" height="170" >
+                </div>                
+                <div class="table">
+                    <h2>Топ 10 игроков (WN8)</h2>
+                    <p>от 15к боев, ср. ур. техники 9-10</p>
+                    <ol class="top10">
+                        <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/WoIfHeart/">WoIfHeart</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5895                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        28160                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (70%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Loisez/">Loisez</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">5816</span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        17760                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (68%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Stanlox/">Stanlox</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5795                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        34420                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (71%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/__NIDIN__/">__NIDIN__</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5629                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        42057                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (72%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Sh0tnik/">Sh0tnik</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5562                    </span>
+                                    <span title="Количество боёв" style="color:#c64cff">
+                                        68154                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (71%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Diffynder/">Diffynder</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5539                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        35922                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (70%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Wierer/">Wierer</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5515                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        24293                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (68%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Summer_hoodrich/">Summer_hoodrich</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        5424                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        22660                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (67%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/selael/">selael</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        4996                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        20485                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (67%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                                <li>
+                            <span class="wrap">
+                                <span class="left">
+                                    <a href="/wot/ru/user/Wilf_/">Wilf_</a>
+                                </span>
+                                <span class="right" style="color:#c64cff">
+                                    <span title="WN8" style="color:#c64cff">
+                                        4986                    </span>
+                                    <span title="Количество боёв" style="color:#25c2dd">
+                                        23605                    </span>
+                                    <span title="Побед" style="color:#c64cff">
+                                        (70%)
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="detail"><a href="/wot/ru/top/users/wn8/15000/">Топ 1000 игроков WN8</a></li>
+                    </ol>
+                </div>
+            </div>
+        </head>
+    </body>
+</html>
